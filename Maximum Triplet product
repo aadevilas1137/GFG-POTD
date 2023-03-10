@@ -1,0 +1,29 @@
+class Solution {
+  public:
+    long long maxTripletProduct(long long arr[], int n)
+    {
+        long long nin[3], nax[3];
+        nin[0] = nin[1] = nin[2] = 1e10;
+        nax[0] = nax[1] = nax[2] = -1e10;
+        
+        for(int i = 0; i < n; i++){
+            long long current = arr[i];
+            
+            for(int j = 0; j < 3; j++){
+                if(current < nin[j])
+                    swap(nin[j], current);
+            }
+            
+            current = arr[i];
+            
+            for(int j = 0; j < 3; j++){
+                if(current > nax[j])
+                    swap(nax[j], current);
+            }
+        }
+        
+        long long ans = max(nin[0] * nin[1] * nax[0], nax[0] * nax[1] * nax[2]);
+    	
+    	return ans;
+    }
+};
