@@ -1,2 +1,2 @@
-# gfg-potd-Day-1
+# gfg-potd
 Maximum Triplet product
