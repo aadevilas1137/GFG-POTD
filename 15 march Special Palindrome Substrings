@@ -1,4 +1,4 @@
-#User function Template for python3
+
 import sys
 def f(a,b,strt,end) :
     ans=0;
